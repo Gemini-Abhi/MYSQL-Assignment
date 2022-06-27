@@ -1,0 +1,12 @@
+--Write an SQl query to print the first three chracters of FIRST_name from worker table.
+
+select SUBSTRING(FIRST_NAME,1,3) from Worker
+
+--Write an SQL query to find the position of the alphabet('a') in the first name column 'Amitabh' from worker table.
+
+SELECT charindex('a','FIRST_NAME') FROM Worker WHERE FIRST_NAME= 'Amitabh'
+
+--write an SQL query to print the name of employees having the highest salary in each department.
+
+select    MAX(SALARY) AS HIGHEST_SALARY,DEPARTMENT from Worker GROUP BY DEPARTMENT
+
