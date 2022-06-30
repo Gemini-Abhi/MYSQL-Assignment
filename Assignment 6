@@ -1,0 +1,12 @@
+--Write an SQL query to print details of the Workers who have joined in Feb’2014.
+
+select * from worker where joining_date  between '2014-02-01' and  '2014-02-28';
+
+--Write an SQL query to fetch duplicate records having matching data in some fields of
+a table.
+
+select worker_title,affected_from, COUNT(*) from Title group by worker_title,affected_from having COUNT(*)>1
+
+--How to remove duplicate rows from Employees table.
+
+delete from Employee where WORKER_REF_ID   not in (select MAX(worker_ref_id) from Employee group by WORKER_TITLE,AFFECTED_FROM)
