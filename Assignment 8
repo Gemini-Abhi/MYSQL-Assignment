@@ -1,0 +1,10 @@
+--Write an SQL query to fetch intersecting records of two tables.
+
+(select * from Worker) 
+intersect
+(select* from workerclone1)
+
+--Write an SQL query to show records from one table that another table does not have.
+select * from Worker
+minus
+select* from title;
